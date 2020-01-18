@@ -102,13 +102,14 @@ Puppeth is an Ethereum private network manager that is accessed through a comman
 ```
 -  copy the entire `enode://` address (including the last `@address:port` segment) of the first node located in the `Started P2P Networking` line:
 
-![encode](Images/node1_unlock.png)
+![encode](/node1_unlock.png)
 
 ```
 ./geth --datadir node2 --unlock "Node2_address" --port 30305 --bootnodes enode://YOUR_ENDCODE_FROM_NODE1 --password node2/password.txt  --allow-insecure-unlock --ipcdisable console
-
-![encode](Images/node2_unlock.png)
 ```
+
+![encode](screenshots/node2_unlock.png)
+
 
 ## Connect Network to MyCrpto App
 
@@ -134,7 +135,7 @@ For the nodes to connect, a new custom network must be created in MyCrpto.
 
 9. The transaction should read Succesfull! 
 
-![transaction-success](Images/trxn_status.png)
+![transaction-success](screenshots/trxn_status.png)
 
 
 
