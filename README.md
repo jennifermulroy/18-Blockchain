@@ -102,7 +102,7 @@ Puppeth is an Ethereum private network manager that is accessed through a comman
 ```
 -  copy the entire `enode://` address (including the last `@address:port` segment) of the first node located in the `Started P2P Networking` line:
 
-![encode](/node1_unlock.png)
+![encode](screenshots/node1_unlock.png)
 
 ```
 ./geth --datadir node2 --unlock "Node2_address" --port 30305 --bootnodes enode://YOUR_ENDCODE_FROM_NODE1 --password node2/password.txt  --allow-insecure-unlock --ipcdisable console
