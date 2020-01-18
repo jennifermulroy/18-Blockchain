@@ -85,3 +85,56 @@ Puppeth is an Ethereum private network manager that is accessed through a comman
 11. This should generate json files in the Blockchain-Tools folder
 
 12. Exit the puppeth prompt by using the Ctrl+C keys combination.
+
+![custom-node](screenshots/puppeth.png)
+
+## Starting the Blockchain
+
+1. Initialize nodes
+```
+./geth init zbankcoinz.json --datadir node1
+./geth init zbankcoinz.json --datadir node2
+```
+
+2. Launch the nodes into mining mode. To unlock the nodes, addresses and passwords are needed. 
+```
+./geth --datadir node1 --mine --minerthreads 1 --unlock "Node1_address" --password node1/password.txt --rpc --allow-insecure-unlock
+```
+-  copy the entire `enode://` address (including the last `@address:port` segment) of the first node located in the `Started P2P Networking` line:
+
+![encode](Images/node1_unlock.png)
+
+```
+./geth --datadir node2 --unlock "Node2_address" --port 30305 --bootnodes enode://YOUR_ENDCODE_FROM_NODE1 --password node2/password.txt  --allow-insecure-unlock --ipcdisable console
+
+![encode](Images/node2_unlock.png)
+```
+
+## Connect Network to MyCrpto App
+
+For the nodes to connect, a new custom network must be created in MyCrpto. 
+
+1. Select "Add Custom Node", then add the custom network information that was set in the genesis.
+
+2. Make sure that you scroll down to choose Custom in the "Network" column. The chain ID must match the ID created using puppeth. 
+
+4. The URL is pointing to the default RPC port on the local machine. Use http://127.0.0.1:8545.
+
+5. Select "Change Network" and select the Custom Node. 
+
+6. Click on the "Save & Use Custom Node" button, to use the network; double-check that it is selected and is connected.
+
+7. Import the keystore file from the `node1/keystore` directory into MyCrypto. This will import the private key. Use the password of node1. 
+
+8. Send a transaction from the `node1` account to the `node2` account. Use the public address of node 2 to send transaction. 
+
+![transaction-success](screenshots/send_trxn.png)
+
+![transaction-success](screenshots/trxn_confirm.png)
+
+9. The transaction should read Succesfull! 
+
+![transaction-success](Images/trxn_status.png)
+
+
+
