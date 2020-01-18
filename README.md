@@ -135,7 +135,7 @@ For the nodes to connect, a new custom network must be created in MyCrpto.
 
 9. The transaction should read Succesfull! 
 
-![transaction-success](screenshots/trxn_status.png)
+![transaction-success](screenshots/trxn_successful.png)
 
 
 
