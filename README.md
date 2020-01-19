@@ -16,17 +16,17 @@ Tokens inherently have no value here, so pre-configured accounts and nodes for e
 
 ## Blockchain Consensus Algorithms
 
-Blockchain is a time-stamped series of immutable records of data managed by a clusters of computers and not owned by any single entity or government. Each block of data is secured and bound using cryptographic principles, a 'chain'.  The blockchain network has no central authority, it is a shared and immutable ledger. It is very transparent and all involved are held accountable.
+Blockchain is a time-stamped series of immutable records of data managed by clusters of computers and not owned by a single entity or government. Each block of data is secured and bound using cryptographic principles, a 'chain'.  The blockchain network has no central authority, it is a shared and immutable ledger. It is very transparent and all involved are held accountable.
 
 A consensus algorithm determines the validity of transactions; a way in which the network reaches consensus as there is no central authority. The alogorithms ensure the correct protocol rules are being followed and network participants agree on the current state of the Blockchain without oversight. 
 
 There are currently three consensus algorithms, Proof of Work (PoW), Proof of Stake (PoS), and Proof of Authority (PoA). PoA is used in this assignment. 
 
-*Proof of Work*: Bitcoin uses PoW, it selects a miner for the next block generation. The miner is tasked with a complex mathematical puzzle that requires a lot of computation power and if solves the puzzle get to mine the next block. 
+*Proof of Work*: Bitcoin uses PoW, it selects a miner for the next block generation. The miner is tasked with a complex mathematical puzzle that requires a lot of computation power and when the puzzle is solved the miner gets to mine the next block.
 
-*Proof of Authority* : Proof of Authority is reputation-based, assigning approved validators with the task of verifying blocks enables. Validators have incentives to act ethically. 
+*Proof of Authority* : Proof of Authority is reputation-based, assigning approved validators with the task of verifying blocks. Validators have incentives to act ethically. 
 
-*Proof of Stake*: In Proof of Stake, validators invest in the coins of the system, unlocking their coins as stake. After that, all the validators will start validating the blocks. Validators will validate blocks by placing a bet on it if they discover a block which they think can be added to the chain. Based on the actual blocks added in the Blockchain, all the validators get a reward proportionate to their bets and their stake increase accordingly.
+*Proof of Stake*: In Proof of Stake, validators invest in the coins of the system, unlocking their coins as stake and validating the blocks. Validators will validate blocks by placing a bet on it if they discover a block which they think can be added to the chain. Based on the actual blocks added in the Blockchain, all the validators get a reward proportionate to their bets and their stake increase accordingly.
 
 
 ## Blockchain and Ethereum Tools Installation Guide
